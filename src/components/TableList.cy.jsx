@@ -2,7 +2,7 @@ import React from 'react'
 import TableList from './TableList'
 
 describe('TableList Component', () => {
-  it('contains ', () => {
+  it('contains the correct number of users ', () => {
     const users = [{
       id: 1,
       name: "Anuj",

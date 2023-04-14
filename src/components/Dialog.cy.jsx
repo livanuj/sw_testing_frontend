@@ -2,7 +2,7 @@ import React from 'react'
 import Dialog from './Dialog'
 
 describe('Dialog Component', () => {
-  it('contains the correct number of todos', () => {
+  it('Dialog box renders correct Title and the Body', () => {
     const open = true;
 
     const modalTitle = 'create'
