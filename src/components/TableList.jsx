@@ -3,13 +3,10 @@ import React from 'react';
 const TableList = (props) => {
   const { users, setOpen, setAction } = props
 
-  const rendeerTableRow = (user) => {
+  const renderTableRow = (user) => {
     return (
-      <tr key={user.id} className="hover:bg-gray-50">
+      <tr data-testid="users-list" key={user.id} className="hover:bg-gray-50">
       <th className="flex gap-3 px-6 py-4 font-normal text-gray-900">
-        {/* <div className="relative h-10 w-10">
-          <span className="absolute right-0 bottom-0 h-2 w-2 rounded-full bg-green-400 ring ring-white"></span>
-        </div> */}
         <div className="text-sm">
           <div className="font-medium text-gray-700">{user.name}</div>
         </div>
@@ -81,8 +78,10 @@ const TableList = (props) => {
 
   return (
     <div className="overflow-hidden rounded-lg border border-gray-200 shadow-md m-5">
-    <table className="w-full border-collapse bg-white text-left text-sm text-gray-500">
-      <thead className="bg-gray-50">
+    <table data-testid="user-table" className="user-table w-full border-collapse bg-white text-left text-sm text-gray-500">
+      <thead
+        data-testid="user-table-head" 
+        className="bg-gray-50">
         <tr>
           <th scope="col" className="px-6 py-4 font-medium text-gray-900">Name</th>
           <th scope="col" className="px-6 py-4 font-medium text-gray-900">Username</th>
@@ -90,6 +89,7 @@ const TableList = (props) => {
           <th scope="col" className="px-6 py-4 font-medium text-gray-900">website</th>
           <th scope="col" className="px-6 font-medium text-gray-900 float-right pr-7 pt-2">
             <button
+              data-testid="add-user-button"
               type="button"
               className="text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
               onClick={() => {
@@ -105,7 +105,7 @@ const TableList = (props) => {
         </tr>
       </thead>
       <tbody className="divide-y divide-gray-100 border-t border-gray-100">
-        {users.map(user => rendeerTableRow(user))}
+        {users.map(user => renderTableRow(user))}
       </tbody>
     </table>
   </div>

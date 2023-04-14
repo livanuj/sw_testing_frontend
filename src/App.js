@@ -14,7 +14,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <UserList />
-      <ToastContainer theme="colored"/>
+      <ToastContainer data-testid="toast-container" theme="colored"/>
     </QueryClientProvider>
   );
 }

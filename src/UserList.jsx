@@ -96,7 +96,8 @@ const UserList = () => {
           <div className="mx-auto max-w-lg ">
             <div className="py-1">
               <span className="px-1 text-sm text-gray-600">Name</span>
-              <input 
+              <input
+                data-testid="user-input-name"
                 value={userDetail.name}
                 onChange={(e) => handleOnTextChange('name', e.target.value)}
                 placeholder=""
@@ -107,6 +108,7 @@ const UserList = () => {
             <div className="py-1">
               <span className="px-1 text-sm text-gray-600">Username</span>
               <input
+                data-testid="user-input-username"
                 value={userDetail.username}
                 onChange={(e) => handleOnTextChange('username', e.target.value)}
                 placeholder=""
@@ -117,6 +119,7 @@ const UserList = () => {
             <div className="py-1">
               <span className="px-1 text-sm text-gray-600">Email</span>
               <input
+                data-testid="user-input-email"
                 value={userDetail.email}
                 onChange={(e) => handleOnTextChange('email', e.target.value)}
                 placeholder=""
@@ -127,6 +130,7 @@ const UserList = () => {
             <div className="py-1">
               <span className="px-1 text-sm text-gray-600">Website</span>
               <input
+                data-testid="user-input-website"
                 value={userDetail.website}
                 onChange={(e) => handleOnTextChange('website', e.target.value)}
                 placeholder=""

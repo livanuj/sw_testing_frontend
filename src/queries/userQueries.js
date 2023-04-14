@@ -1,5 +1,3 @@
-
-// const axios = require('axios');
 import axios from 'axios';
 
 export const getUsers = async () => {
@@ -48,7 +46,6 @@ export const deleteUser =  async (userId) => {
   try {
     const response = await axios.delete(url);
 
-    console.log(response)
     if (response.status === 204) {
       return response.data;
     }
